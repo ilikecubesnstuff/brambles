@@ -29,6 +29,8 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
         with:
