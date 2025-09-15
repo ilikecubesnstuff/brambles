@@ -1,0 +1,18 @@
+{{- $BaseURL := .Site.BaseURL }}
+<header>
+  <nav class="navbar">
+    <div class="nav">
+      <a href="{{ $BaseURL }}" class="nav-logo">
+        <img src="{{ $BaseURL }}brambles_logo.svg">
+      </a>
+
+      <ul class="nav-links">
+        <li></li>
+        {{- range .Site.Params.nav }}
+        <li><a href="{{ $BaseURL | relURL }}{{ .url }}" name="{{ .name }}">{{ .name }}</a></li>
+        {{- end }}
+        <li></li>
+      </ul>
+    </div>
+  </nav>
+</header>

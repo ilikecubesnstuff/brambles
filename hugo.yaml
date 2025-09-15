@@ -1,0 +1,32 @@
+baseURL: "https://ilikecubesnstuff.github.io/brambles"
+title: "Brambles"
+languageCode: "en"
+publishDir: "site"
+
+enableInlineShortcodes: true
+ignoreFiles: [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
+
+params:
+  author:
+    name: Subhadeep Sarkar
+  description: A personal blog with rambling posts (usually) about math, physics, or programming from a current Ph.D. student in galactic dynamics.
+  logo:
+    url: logo.png
+  nav:
+    - name: Home
+      url: /
+    - name: About
+      url: /about/
+    - name: Posts
+      url: /posts/
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "monokai"
+
+caches:
+  images:
+    dir: :cacheDir/images

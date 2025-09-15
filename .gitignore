@@ -1,0 +1,10 @@
+.DS_Store
+trash
+
+# quarto files
+/.quarto/
+**/*.quarto_ipynb
+
+# hugo files
+/site/
+/resources/_gen/

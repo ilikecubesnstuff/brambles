@@ -1,0 +1,38 @@
+{{- define "main" }}
+{{- $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) 3 -}}
+<div class="container main-menu" role="main">
+  <div class="frontmatter">
+    <h1 class="title">{{ .Title }}</h1>
+    <p class="deck">{{ .Params.deck }}</p>
+  </div>
+  {{ .Content }}
+
+  <div class="posts-list">
+    {{- range $pag.Pages }}
+      {{ partial "summary.html" . }}
+    {{- end }}
+  </div>
+  {{- if or ($pag.HasPrev) ($pag.HasNext) }}
+  <div class="page-buttons">
+    {{- if $pag.HasPrev }}
+    <a href="{{ .Permalink }}page/{{ $pag.Prev.PageNumber }}/">
+      <div class="previous button">
+        &larr; Newer
+      </div>
+    </a>
+    {{- else }}
+    <div></div>
+    {{- end }}
+    {{- if $pag.HasNext }}
+    <a href="{{ .Permalink }}page/{{ $pag.Next.PageNumber }}/">
+      <div class="next button">
+        Older &rarr;
+      </div>
+    </a>
+    {{- else }}
+    <div></div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+{{- end }}

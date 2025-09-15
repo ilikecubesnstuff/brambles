@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container" role="main">
+  {{- $parentTitle := .Params.parent -}}
+  {{ if $parentTitle }}
+    {{ $parents := where site.RegularPages "Title" $parentTitle }}
+    {{ if gt (len $parents) 0 }}
+      {{ $parent := index $parents 0 }}
+      <div class="posts-list">
+      {{ partial "summary.html" $parent }}
+      </div>
+      <p class="readmore">This post serves as a follow-up to the post above.</p>
+    {{ end }}
+  {{ end }}
+
+  {{ partial "fullpost.html" . }}
+</div>
+{{ end }}

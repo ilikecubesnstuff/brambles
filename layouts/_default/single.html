@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{- $lastmod := .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+{{- $pubdate := .PublishDate.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+<div class="container" role="main">
+  <div class="frontmatter">
+    <h1 class="title">{{ .Title }}</h1>
+    <p class="deck">{{ .Params.deck }}</p>
+  </div>
+
+  {{ .Content }}
+</div>
+{{ end }}
