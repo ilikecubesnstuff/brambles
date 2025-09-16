@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-    {{- partial "head.html" . -}}
-    <body>
-        <div id="top"></div>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-
+{{ partial "head.html" . }}
+  <body>
+    <div id="top"></div>
+    {{ partial "header.html" . }}
+    <div id="content">
+      {{ block "main" . }}{{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+  </body>
   <!-- Copy code buttons: https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/ -->
   <script src="{{ "copy_code.js" | relURL }}" defer></script>
 </html>

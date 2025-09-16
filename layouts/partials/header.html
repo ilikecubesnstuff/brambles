@@ -1,4 +1,4 @@
-{{- $BaseURL := .Site.BaseURL }}
+{{- $BaseURL := .Site.BaseURL -}}
 <header>
   <nav class="navbar">
     <div class="nav">
@@ -8,9 +8,9 @@
 
       <ul class="nav-links">
         <li></li>
-        {{- range .Site.Params.nav }}
+        {{- range .Site.Params.nav -}}
         <li><a href="{{ $BaseURL | relURL }}{{ .url }}" name="{{ .name }}">{{ .name }}</a></li>
-        {{- end }}
+        {{- end -}}
         <li></li>
       </ul>
     </div>

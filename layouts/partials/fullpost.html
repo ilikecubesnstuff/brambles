@@ -1,27 +1,27 @@
-{{- $lastmod := .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
-{{- $pubdate := .PublishDate.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+{{- $lastmod := .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") -}}
+{{- $pubdate := .PublishDate.Format ( .Site.Params.dateformat | default "Jan 2, 2006") -}}
 <article class="article" class="blog-post">
-    <div class="frontmatter">
-        <h1 class="title" id="#title">{{ .Title }}</h1>
-        <p class="deck">{{ .Params.deck }}</p>
-        <p class="author">{{ .Site.Params.Author.name }}</p>
-        <p class="pubdate">{{ $pubdate }}</p>
-        {{- if ne $lastmod $pubdate }}
-        <p class="lastmod">Last modified on {{ $lastmod }}.</p>
-        {{- end }}
-    </div>
+  <div class="frontmatter">
+    <h1 class="title" id="#title">{{ .Title }}</h1>
+    <p class="deck">{{ .Params.deck }}</p>
+    <p class="author">{{ .Site.Params.Author.name }}</p>
+    <p class="pubdate">{{ $pubdate }}</p>
+    {{- if ne $lastmod $pubdate -}}
+    <p class="lastmod">Last modified on {{ $lastmod }}.</p>
+    {{- end -}}
+  </div>
 
-    {{- if .Params.tags }}
-    <p class="tags">
-        {{- range .Params.tags }}
-        <span class="post-tag {{ . }}">{{ . }}</span>
-        {{- end }}
-    </p>
-    {{- end }}
+  {{- if .Params.tags -}}
+  <p class="tags">
+    {{- range .Params.tags -}}
+    <span class="post-tag {{ . }}">{{ . }}</span>
+    {{- end -}}
+  </p>
+  {{- end -}}
 
-    {{ .Content }}
-    <hr>
-    <div class="backtotop">
-        <a href="#top">Back to top</a>
-    </div>
+  {{ .Content }}
+  <hr>
+  <div class="backtotop">
+    <a href="#top">Back to top</a>
+  </div>
 </article>
