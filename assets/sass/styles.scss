@@ -238,8 +238,14 @@ article {
     }
 }
 
-code {
-    font-family: "Courier Prime", monospace;
+pre {
+    border-radius: 0;
+    padding: 6px 12px;
+    margin: 0;
+
+    code {
+        font-family: "Courier Prime", monospace;
+    }
 }
 
 .backtotop {
@@ -274,5 +280,20 @@ footer {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.copy-code-button {
+    color: black;
+    background-color: lighten($background-color, 5%);
+    border: 2px solid darken($link-color, 10%);
+
+    width: 90px;
+    font-size: 0.9em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($background-color, 5%);
+        transition: background-color 0.1s ease-in;
     }
 }
