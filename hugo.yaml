@@ -19,6 +19,7 @@ params:
       url: /about/
     - name: Posts
       url: /posts/
+  math: true
 
 markup:
   goldmark:
