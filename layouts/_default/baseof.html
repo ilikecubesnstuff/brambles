@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
+        <div id="top"></div>
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
