@@ -242,9 +242,23 @@ pre {
     border-radius: 0;
     padding: 6px 12px;
     margin: 0;
+    scrollbar-color: $background-color #282a36; /* background from dracula theme */
+    scrollbar-width: thin;
 
     code {
         font-family: "Courier Prime", monospace;
+    }
+
+    /* WebKit and Chromiums */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: #282a36; /* background from dracula theme" */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $background-color;
+        border-radius: 5px;
     }
 }
 
@@ -296,4 +310,22 @@ footer {
         background-color: darken($background-color, 5%);
         transition: background-color 0.1s ease-in;
     }
+}
+
+/* Firefox */
+html {
+  scrollbar-color: $link-color $background-color;
+  scrollbar-width: thin;
+}
+
+/* WebKit and Chromiums */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: $background-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $link-color;
+  border-radius: 5px;
 }
