@@ -4,6 +4,7 @@ parent: null
 title: "Initial Bramblings"
 deck: "May the wary but courageous wanderer, through the brambled bed of the forest of knowledge, find and savour the sweetest berries."
 date: '2025-09-16T10:22:28+02:00'
+lastmod: '2025-09-17T19:04:49+02:00'
 tags: []
 ---
 Hello!
@@ -67,7 +68,7 @@ To generate a blog, I need a tool that can take human-readable input files and g
 [Thoughts From A Lake](https://lekhbhatia.github.io/) is built using a publishing system called [**Quarto**](https://quarto.org/).
 Quarto can accept Jupyter notebooks (`.ipynb`) as well as computational markdown documents (`.qmd`) as input. `.qmd` is a special markdown format that directs Quarto to execute code cells within the document and include its artefacts in the final output (in effect, a markdown Jupyter notebook). It is purpose-built for technical documents, which is pretty neat. Seeing that I would mostly write about code-adjacent and math-adjacent things, it is important that code/math is formatted/typeset properly.
 
-For code, I do not tinker much with Quarto's defaults beyond setting the color scheme to `monokai`. Code sample below:{{% sidenote %}}Code excerpt from a Python script for generating secret Santa pairings.{{% /sidenote %}}
+For code, I do not tinker much with Quarto's defaults beyond setting the color scheme to `dracula`. Code sample below:{{% sidenote %}}Code excerpt from a Python script for generating secret Santa pairings.{{% /sidenote %}}
 
 ```python
 def random_derangement(seq: list[str]):
@@ -128,7 +129,7 @@ Sue me.*
 I had a couple of reasons to put in this extra effort, but as an example, I desired the modularity to make blog posts as *responses* or *follow-ups* to previous posts. I don't know how much effort it would have been to implement in Quarto alone, but Hugo's templating system certainly made it easier. This feature is excellent for the perfectionist, since publishing posts has an otherwise looming finality that the flexibility of follow-ups wonderfully enervate.
 
 Here is an example of a Hugo template. The Go scripts are contained within the `{{{ }}}` delimiters, which provides the templating logic for the surrounding HTML. This specific template is used for each blogpost's page on this website.
-```go
+```go-html-template
 {{- $lastmod := .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
 {{- $pubdate := .PublishDate.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
 <article class="article" class="blog-post">
