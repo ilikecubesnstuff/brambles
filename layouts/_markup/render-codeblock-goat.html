@@ -1,0 +1,16 @@
+{{ $width := .Attributes.width }}
+{{ $height := .Attributes.height }}
+{{ $class := .Attributes.class | default "" }}
+<div class="goat svg-container {{ $class }}">
+  {{ with diagrams.Goat .Inner }}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 {{ .Width }} {{ .Height }}"
+      {{ if or $width $height }}
+        {{ with $width }}width="{{ . }}"{{ end }}
+        {{ with $height }}height="{{ . }}"{{ end }}
+      {{ end }}>
+      {{ .Inner }}
+    </svg>
+  {{ end }}
+</div>
