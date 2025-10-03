@@ -5,7 +5,13 @@
   {{- else -}}
   <title>{{ .Site.Title }}</title>
   {{- end -}}
+
+  {{- if .Params.deck -}}
+  <meta name="description" content="{{ .Params.deck }}" />
+  {{- else -}}
   <meta name="description" content="{{ .Site.Params.description }}" />
+  {{- end -}}
+
   <meta name="author" content="{{ .Site.Params.Author.Name }}"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
