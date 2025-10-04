@@ -4,6 +4,7 @@ parent: null
 title: Exploring 24's Solution Space
 deck: 'Venturing into the combinatorial & computational rabbit-hole of a simple arithmetic game. Can you solve the hardest 24 rolls?'
 date: '2025-10-03T21:05:21+02:00'
+lastmod: '2025-10-04T22:46:37+02:00'
 tags: []
 ---
 
@@ -12,7 +13,7 @@ tags: []
 The idea is simple; you are presented with four numbers in the range 1--12 (henceforth a "roll"):
 $$4, 8, 7, 8$$
 Then, using the four basic operations (\\(+, -, \times, \div\\)), you must write an expression that evaluates to 24 using *all* the numbers provided in the roll.
-Can you figure out the example above? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Solution:* {{% spoiler %}}\\( 4 \times (7 - 8 \div 8) \\).{{% /spoiler %}}
+Can you figure out the example above? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Solution:* {{% spoiler %}}\\( (4 + 8 - 7) \times 8 \\).{{% /spoiler %}}
 
 Coding a 24 game and playing it with friends are both entertaining pasttimes, but the game presents some interesting challenges along the way.
 First and foremost, we need a way to generate rolls.
@@ -36,7 +37,7 @@ This, as with most combinatorial problems, is a more difficult endeavor than it 
 $$\text{number}\quad\text{operation}\quad\text{number}\quad\text{operation}\quad\text{number}\quad\text{operation}\quad\text{number}$$
 hoping to reach all expressions, but without adding parentheses, certain expressions like \\((a+b)\times(c+d)\\) are unreachable due to the strict grammar of the Order Of Operations™.
 A better approach is to enforce full parenthesization---that is, one set of parentheses per operation. 
-This way, the order of operations is enforced by construction rather than by the arbitrary grammar of PEMDAS.
+This way, the order of operations is enforced by construction rather than by the arbitrary grammar of PEMDAS{{% sidenote %}}For those unfamiliar, PEMDAS (or BIDMAS or whatever other acronym) is a mnemonic for remembering which operations take precedence with evaluating an expression: **p**arentheses, **e**xponents, **m**ultiplication, **d**ivision, **a**ddition, **s**ubtraction.{{% /sidenote %}}.
 However, simply adding parentheses is not so simple.
 $$a \cdot b \cdot c \cdot d$$
 Here \\(\cdot\\) represents an arbitrary operation. 
@@ -218,10 +219,10 @@ Isn't that amazing? Roll \\(n\\) dice of \\(d\\) faces and the number of unique 
 
 Let's look at a couple sequences that arise with various \\(d\\):
 - \\(d=1\\) &rarr; 1, 1, 1, 1, 1, ...{{% sidenote %}}[A000012](https://oeis.org/A000012) on OEIS.{{% /sidenote %}}
-- \\(d=2\\) &rarr; 1, 2, 3, 4, 5, ...{{% sidenote %}}[A000027](https://oeis.org/A000027) on OEIS.{{% /sidenote %}} (natural numbers)
-- \\(d=3\\) &rarr; 1, 3, 6, 10, 15, ...{{% sidenote %}}[A000217](https://oeis.org/A000217) on OEIS.{{% /sidenote %}} (triangular numbers)
-- \\(d=4\\) &rarr; 1, 4, 10, 20, 35, ...{{% sidenote %}}[A000292](https://oeis.org/A000292) on OEIS.{{% /sidenote %}} (tetrahedral numbers)
-- \\(d=5\\) &rarr; 1, 5, 15, 35, 70, ...{{% sidenote %}}[A000332](https://oeis.org/A000332) on OEIS.{{% /sidenote %}} (pentanope numbers)
+- \\(d=2\\) &rarr; 1, 2, 3, 4, 5, ... (natural numbers){{% sidenote %}}[A000027](https://oeis.org/A000027) on OEIS.{{% /sidenote %}}
+- \\(d=3\\) &rarr; 1, 3, 6, 10, 15, ... (triangular numbers){{% sidenote %}}[A000217](https://oeis.org/A000217) on OEIS.{{% /sidenote %}}
+- \\(d=4\\) &rarr; 1, 4, 10, 20, 35, ... (tetrahedral numbers){{% sidenote %}}[A000292](https://oeis.org/A000292) on OEIS.{{% /sidenote %}}
+- \\(d=5\\) &rarr; 1, 5, 15, 35, 70, ... (pentanope numbers){{% sidenote %}}[A000332](https://oeis.org/A000332) on OEIS.{{% /sidenote %}}
 
 Even more amazingly, our choice of \\(d\\) generates the \\(d^{\text{th}}\\) diagonal of Pascal's triangle, where increasing \\(n\\) descends the diagonal!
 $$
