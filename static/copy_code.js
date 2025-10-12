@@ -1,7 +1,8 @@
 const codeBlockButtonPairs = [];
 
 function addCopyButtons(clipboard) {
-    document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+    document.querySelectorAll('.highlight > pre > code').forEach(function (codeBlock) {
+        // console.log('Adding copy button to code block', codeBlock);
         var button = document.createElement('button');
         button.className = 'copy-code-button';
         button.type = 'button';
@@ -26,12 +27,8 @@ function addCopyButtons(clipboard) {
         });
 
         var pre = codeBlock.parentNode;
-        if (pre.parentNode.classList.contains('highlight')) {
-            var highlight = pre.parentNode;
-            highlight.parentNode.insertBefore(button, highlight);
-        } else {
-            pre.parentNode.insertBefore(button, pre);
-        }
+        var highlight = pre.parentNode;
+        highlight.parentNode.insertBefore(button, highlight);
 
         codeBlockButtonPairs.push({codeBlock, button});
     });
