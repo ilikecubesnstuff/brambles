@@ -4,7 +4,7 @@ parent: null
 title: Exploring 24's Solution Space
 deck: 'Venturing into the combinatorial & computational rabbit-hole of a simple arithmetic game. Can you solve the hardest 24 rolls?'
 date: '2025-10-03T21:05:21+02:00'
-lastmod: '2025-10-04T22:46:37+02:00'
+lastmod: '2025-10-15T19:17:57+02:00'
 tags: []
 ---
 
@@ -13,9 +13,9 @@ tags: []
 The idea is simple; you are presented with four numbers in the range 1--12 (henceforth a "roll"):
 $$4, 8, 7, 8$$
 Then, using the four basic operations (\\(+, -, \times, \div\\)), you must write an expression that evaluates to 24 using *all* the numbers provided in the roll.
-Can you figure out the example above? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Solution:* {{% spoiler %}}\\( (4 + 8 - 7) \times 8 \\).{{% /spoiler %}}
+Can you figure out the example above? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Solution:* {{% spoiler %}}\\( (4 - 8 + 7) \times 8 \\).{{% /spoiler %}}
 
-Coding a 24 game and playing it with friends are both entertaining pasttimes, but the game presents some interesting challenges along the way.
+Coding a 24 game and playing it with friends are both entertaining pastimes, but the game presents some interesting challenges along the way.
 First and foremost, we need a way to generate rolls.
 The naïve approach is to randomly sample 4 numbers from a uniform distribution over the range 1--12, and then pray that the roll is solvable.
 This works *okay*, but in practice, it is impossible to ascertain if a roll is unsolvable or simply difficult to find a solution for.
