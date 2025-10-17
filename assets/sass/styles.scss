@@ -248,16 +248,16 @@ article {
     }
 }
 
+code {
+    font-family: "Courier Prime", monospace;
+}
+
 pre {
     border-radius: 0;
     padding: 6px 12px;
     margin: 0;
     scrollbar-color: $background-color #282a36; /* background from dracula theme */
     scrollbar-width: thin;
-
-    code {
-        font-family: "Courier Prime", monospace;
-    }
 
     /* WebKit and Chromiums */
     &::-webkit-scrollbar {
