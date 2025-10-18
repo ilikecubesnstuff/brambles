@@ -6,6 +6,7 @@ parent: null
 title: "Unpacking Monty Hall"
 deck: "Understanding the Monty Hall problem from a programmatic perspective."
 date: '2025-10-17T11:49:29+02:00'
+lastmod: '2025-10-18T13:10:37+02:00'
 tags: []
 
 execute:
@@ -17,7 +18,7 @@ The Monty Hall problem has been a staple of popular math media for decades, and 
 It presents a simple setup, with almost universally familiar mathematics, and wields a playfully unintuitive solution.
 
 Run-of-the-mill explainers tend to present one or a combination of a few standard explanations that popular math outlets have converged upon.
-These explanations are, in a way, survivors of a  natural selection process; they are memetically optimized to be the simplest, most intuiitive explanations.
+These explanations are, in a way, survivors of a  natural selection process; they are memetically optimized to be the simplest, most intuitive explanations.
 However, simplicity carries a lurking danger.
 Mathematics, in a culture-wide game of Chinese whispers, undergoes a degradation in precision and rigor---an accretion of *ambiguity*.
 
@@ -120,7 +121,7 @@ Applying the same "grouping" argument, we could conclude that switching yields a
 
 I have, of course, chosen this variant on purpose.
 As I have been alluding to, this argument does not work here.
-Switching cards makes indeed no difference; the probabilities indeed collapse to 1/2--1/2.
+Switching cards makes indeed no difference; the probabilities collapse to 1/2--1/2.
 *What?*
 
 What is different in the Monty Hall problem? The fact that the gameshow host has sentience?
