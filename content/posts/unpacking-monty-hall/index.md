@@ -5,7 +5,8 @@ format:
 parent: null
 title: Unpacking Monty Hall
 deck: Understanding the Monty Hall problem from a programmatic perspective.
-date: '2025-10-17T01:25:44+02:00'
+date: '2025-10-17T11:49:29+02:00'
+lastmod: '2025-10-18T13:10:37+02:00'
 tags: []
 execute:
   echo: true
@@ -17,7 +18,7 @@ The Monty Hall problem has been a staple of popular math media for decades, and 
 It presents a simple setup, with almost universally familiar mathematics, and wields a playfully unintuitive solution.
 
 Run-of-the-mill explainers tend to present one or a combination of a few standard explanations that popular math outlets have converged upon.
-These explanations are, in a way, survivors of a natural selection process; they are memetically optimized to be the simplest, most intuiitive explanations.
+These explanations are, in a way, survivors of a natural selection process; they are memetically optimized to be the simplest, most intuitive explanations.
 However, simplicity carries a lurking danger.
 Mathematics, in a culture-wide game of Chinese whispers, undergoes a degradation in precision and rigor---an accretion of *ambiguity*.
 
@@ -120,7 +121,7 @@ Applying the same "grouping" argument, we could conclude that switching yields a
 
 I have, of course, chosen this variant on purpose.
 As I have been alluding to, this argument does not work here.
-Switching cards makes indeed no difference; the probabilities indeed collapse to 1/2--1/2.
+Switching cards makes indeed no difference; the probabilities collapse to 1/2--1/2.
 *What?*
 
 What is different in the Monty Hall problem? The fact that the gameshow host has sentience?
@@ -225,7 +226,7 @@ for i in range(trials):
 print(f'Classic Monty Hall: {wins}/{trials} ~ {wins/trials}')
 ```
 
-    Classic Monty Hall: 667348/1000000 ~ 0.667348
+    Classic Monty Hall: 667093/1000000 ~ 0.667093
 
 Voilà!
 So... what happened with the game of cards then?
@@ -290,7 +291,7 @@ for i in range(trials):
 print(f'Stalin Monty Hall: {wins}/{total} ~ {wins/total}')
 ```
 
-    Stalin Monty Hall: 221683/443527 ~ 0.49981850033932546
+    Stalin Monty Hall: 221419/443771 ~ 0.4989487821421409
 
 After that one change, our probability now converges to 1/2. Isn't that cool?
 
@@ -330,7 +331,7 @@ for i in range(trials):
 print(f'Semi-Stalin Monty Hall: {wins}/{total} ~ {wins/total}')
 ```
 
-    Semi-Stalin Monty Hall: 333998/667092 ~ 0.5006775677117998
+    Semi-Stalin Monty Hall: 332839/666951 ~ 0.4990456570272779
 
 It turns out that both Stalin variants have the same final probability. Neat!
 
@@ -431,6 +432,6 @@ def stalin_monty_hall():
     return selection == prize
 ```
 
-    classic_monty_hall: 666390/1000000 ~ 0.66639
-    semi_stalin_monty_hall: 333436/666818 ~ 0.5000404908085865
-    stalin_monty_hall: 221722/443951 ~ 0.49942899103729915
+    classic_monty_hall: 666346/1000000 ~ 0.666346
+    semi_stalin_monty_hall: 332283/666191 ~ 0.498780379800988
+    stalin_monty_hall: 221071/443445 ~ 0.49853082118413783
