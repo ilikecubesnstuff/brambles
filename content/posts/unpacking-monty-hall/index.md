@@ -10,6 +10,7 @@ lastmod: '2025-10-18T13:10:37+02:00'
 tags: []
 execute:
   echo: true
+  freeze: auto
 jupyter: python3
 ---
 
