@@ -2,7 +2,7 @@
   <div class="post-block">
     <h2 class="post-title">{{ .Title }}</h2>
     <span class="post-meta">
-      <p class="post-date">{{ .PublishDate.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
+      <p class="post-date">{{ .PublishDate.Format ( .Site.Params.dateformat | default "January 2, 2006") }}</p>
       {{- range .Params.tags -}}
       <span class="post-tag {{ . }}">{{ . }}</span>
       {{- end -}}
