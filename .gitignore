@@ -4,6 +4,7 @@ trash
 # quarto files
 /.quarto/
 **/*.quarto_ipynb
+_freeze/
 
 # hugo files
 /site/

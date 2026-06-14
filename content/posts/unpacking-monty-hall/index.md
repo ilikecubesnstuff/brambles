@@ -227,7 +227,7 @@ for i in range(trials):
 print(f'Classic Monty Hall: {wins}/{trials} ~ {wins/trials}')
 ```
 
-    Classic Monty Hall: 667093/1000000 ~ 0.667093
+    Classic Monty Hall: 666674/1000000 ~ 0.666674
 
 Voilà!
 So... what happened with the game of cards then?
@@ -292,7 +292,7 @@ for i in range(trials):
 print(f'Stalin Monty Hall: {wins}/{total} ~ {wins/total}')
 ```
 
-    Stalin Monty Hall: 221419/443771 ~ 0.4989487821421409
+    Stalin Monty Hall: 221898/444404 ~ 0.4993159377503353
 
 After that one change, our probability now converges to 1/2. Isn't that cool?
 
@@ -332,7 +332,7 @@ for i in range(trials):
 print(f'Semi-Stalin Monty Hall: {wins}/{total} ~ {wins/total}')
 ```
 
-    Semi-Stalin Monty Hall: 332839/666951 ~ 0.4990456570272779
+    Semi-Stalin Monty Hall: 333229/667087 ~ 0.49952854725095824
 
 It turns out that both Stalin variants have the same final probability. Neat!
 
@@ -433,6 +433,6 @@ def stalin_monty_hall():
     return selection == prize
 ```
 
-    classic_monty_hall: 666346/1000000 ~ 0.666346
-    semi_stalin_monty_hall: 332283/666191 ~ 0.498780379800988
-    stalin_monty_hall: 221071/443445 ~ 0.49853082118413783
+    classic_monty_hall: 666501/1000000 ~ 0.666501
+    semi_stalin_monty_hall: 333405/666111 ~ 0.5005246873268869
+    stalin_monty_hall: 222052/443661 ~ 0.5004992550618603

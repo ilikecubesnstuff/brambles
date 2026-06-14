@@ -168,19 +168,19 @@ Instead, consider how many distinct elements are rolled overall.
 Since the order of elements in a roll does not matter, we can sort a roll in increasing order without losing generality.
 Grouping duplicates uncovers a blueprint of all possibilities for a roll.
 $$
-\def\s{\\ \\,\\ }
-\def\sep{\\ |\\ }
+\def\s{\ \,\ }
+\def\sep{\ |\ }
 \begin{gather}
-   a \sep b \sep c \sep d \\\\
-   \\\\
-   a \sep b \sep c \s c \\\\
-   a \sep b \s b \sep c \\\\
-   a \s a \sep b \sep c \\\\
-   \\\\
-   a \sep b \s b \s b \\\\
-   a \s a \sep b \s b \\\\
-   a \s a \s a \sep b \\\\
-   \\\\
+   a \sep b \sep c \sep d \\
+   \\
+   a \sep b \sep c \s c \\
+   a \sep b \s b \sep c \\
+   a \s a \sep b \sep c \\
+   \\
+   a \sep b \s b \s b \\
+   a \s a \sep b \s b \\
+   a \s a \s a \sep b \\
+   \\
    a \s a \s a \s a
 \end{gather}
 $$
