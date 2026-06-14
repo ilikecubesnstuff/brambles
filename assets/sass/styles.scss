@@ -22,6 +22,14 @@ p {
     padding: 0;
 }
 
+.diagram-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.1rem;
+    color: #444444;
+}
+
 .readmore {
     font-style: italic;
     font-weight: bold;
@@ -128,10 +136,12 @@ p {
         padding: 6px 12px;
         color: black;
         background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 
         &:hover {
             background-color: darken($background-color, 10%);
-            transition: background-color 0.1s ease-in;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.1s ease-in, box-shadow 0.1s ease-in;
         }
 
         .post-title {
@@ -211,6 +221,7 @@ article {
     background-color: #fff;
     padding: 6px 12px;
     margin: 10px 0 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 
     a {
         color: $article-link-color;

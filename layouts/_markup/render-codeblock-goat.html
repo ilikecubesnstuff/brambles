@@ -1,6 +1,7 @@
 {{ $width := .Attributes.width }}
 {{ $height := .Attributes.height }}
 {{ $class := .Attributes.class | default "" }}
+{{ $textStyle := .Attributes.style | default "" }}
 <div class="goat svg-container {{ $class }}">
   {{ with diagrams.Goat .Inner }}
     <svg
@@ -10,6 +11,7 @@
         {{ with $width }}width="{{ . }}"{{ end }}
         {{ with $height }}height="{{ . }}"{{ end }}
       {{ end }}>
+      {{ if $textStyle }}<style>text { {{ $textStyle | safeCSS }} }</style>{{ end }}
       {{ .Inner }}
     </svg>
   {{ end }}
